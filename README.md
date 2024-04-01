@@ -34,6 +34,15 @@ This ansible role deploys msmtp as a mailer for Debian, Ubuntu, Arch & Alpine Li
         user:      myuser@example.org
         password:  plain-text-password2
         tls_starttls: "off"
+      - account:   local
+        host:      127.0.0.1
+        port:      25
+        auth:      "plain"
+        from:      admin@example.com
+        user:      myuser@example.com
+        password:  plain-text-password3
+        tls:       "off"
+        tls_starttls: "off"
       ```
   - *msmtp_default_account:* Default smtp account to use
 
